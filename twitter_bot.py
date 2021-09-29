@@ -23,14 +23,6 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 
-# # Test authentication.
-# try:
-#     api.verify_credentials()
-#     print("Authentication successful!")
-# except:
-#     print("Error during authentication")
-
-
 # Search for the 10 most recent tweets about Trudeau from within a 20-mile radius around the White House.
 cursor = tweepy.Cursor(api.search_tweets, q="Trudeau", geocode="38.8977,-77.0365,20mi").items(10)
 
