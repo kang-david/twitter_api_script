@@ -24,7 +24,11 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 
 # Search for the 10 most recent tweets about Trudeau from within a 20-mile radius around the White House.
-cursor = tweepy.Cursor(api.search_tweets, q="Trudeau", geocode="38.8977,-77.0365,20mi").items(10)
+cursor = tweepy.Cursor(
+    api.search_tweets,
+    q="Trudeau",
+    geocode="38.8977,-77.0365,20mi"
+).items(10)
 
 for i in cursor:
     print(i.text)
