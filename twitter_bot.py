@@ -30,6 +30,10 @@ cursor = tweepy.Cursor(
     geocode="38.8977,-77.0365,20mi"
 ).items(10)
 
+# # Check out the available fields.
+# for i in cursor:
+#     print(dir(i))
+
 for i in cursor:
     print(i.text)
     print("--------------------------------------------------")
